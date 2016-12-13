@@ -1,53 +1,25 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * this is the ENTRY POINT for android application
+ * place ANDROID code here
  */
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+// import required libraries (ES6 syntax)
+import React from 'react';
+import { AppRegistry, Text, View } from 'react-native';
+// import our custom components
+import Header from './src/components/header'; // ./ => start from current dir
 
-export default class albums extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+// create a component (it's a function that returns a react component)
+const App = () => (
+  // JSX syntax get's converted into JavaScript code 
 
-AppRegistry.registerComponent('albums', () => albums);
+    <Header />
+);
+
+
+// render it to the device screen
+// for every app we must register at least 1 component
+AppRegistry.registerComponent('albums', () => App);
+// 'albums' - application names (must match project name)
+// App - actual component
