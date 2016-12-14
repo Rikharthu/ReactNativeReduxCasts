@@ -37,7 +37,7 @@ class AlbumList extends Component {
             .state
             .albums
             .map(album => 
-                <AlbumDetail key={album.title} album={album.title} />
+                <AlbumDetail key={album.title} album={album} />
             );
     }
 
