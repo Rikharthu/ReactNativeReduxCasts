@@ -3,13 +3,15 @@ import { Text, View } from 'react-native';
 
 
 // make a component
-const Header = () => {
+const Header = (props) => {
     const { textStyle, viewStyle } = styles;
     // is equivalent to const textStyle=styles.textStyle
     
+    // props are passed as function params
+
     return (
         <View style={viewStyle}>
-            <Text style={textStyle}>Albums!</Text>
+            <Text style={textStyle}>{props.headerText}</Text>
         </View>
     )
 };

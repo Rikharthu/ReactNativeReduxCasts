@@ -1,3 +1,4 @@
+/*eslint linebreak-style: ["error", "windows"]*/
 /**
  * this is the ENTRY POINT for android application
  * place ANDROID code here
@@ -7,14 +8,17 @@
 import React from 'react';
 import { AppRegistry, Text, View } from 'react-native';
 // import our custom components
-import Header from './src/components/header'; // ./ => start from current dir
+import Header from './src/components/Header'; // ./ => start from current dir
+import AlbumList from './src/components/AlbumList';
 
 
 // create a component (it's a function that returns a react component)
 const App = () => (
   // JSX syntax get's converted into JavaScript code 
-
-    <Header />
+    <View>
+      <Header headerText={'Albums'} />
+      <AlbumList />
+    </View>
 );
 
 
