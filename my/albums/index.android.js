@@ -15,7 +15,7 @@ import AlbumList from './src/components/AlbumList';
 // create a component (it's a function that returns a react component)
 const App = () => (
   // JSX syntax get's converted into JavaScript code 
-    <View>
+    <View style={{ flex: 1 }} > 
       <Header headerText={'Albums'} />
       <AlbumList />
     </View>
