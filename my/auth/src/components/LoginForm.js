@@ -32,7 +32,7 @@ class LoginForm extends Component{
                 </CardSection>
 
                 <CardSection>
-                    <Button>
+                    <Button onPress={this.props.onPress}>
                         Log in
                     </Button>
                 </CardSection> 
